@@ -1,97 +1,32 @@
 @charset "UTF-8";
-/*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-:focus,
-:active {
-  outline: none;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*--------------------------*/
 html {
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  box-sizing: border-box;
+  border: none;
 }
 
 .container {
@@ -490,6 +425,9 @@ html {
 .header-bottom__form {
   padding-left: 30px;
   background: url(../img/icons/search.svg) left 4px no-repeat;
+}
+.header-bottom__form-btn {
+  display: none;
 }
 .header-bottom__input {
   position: relative;
@@ -1364,6 +1302,7 @@ html {
 }
 
 .choices[data-type*=select-one] .choices__inner {
+  box-sizing: border-box;
   padding-top: 0;
   padding-bottom: 2px;
   padding-left: 10px;
@@ -1468,8 +1407,8 @@ html {
   position: absolute;
   width: 5px;
   height: 5px;
-  left: 4px;
-  top: 40%;
+  left: 5px;
+  top: 45%;
   background: url(../img/icons/ellipse.svg) no-repeat;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
@@ -1493,6 +1432,9 @@ html {
 .gallery-form__period.active:after {
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
+}
+.gallery-form__btn {
+  display: none;
 }
 .gallery-form__checkbox {
   display: none;
@@ -2137,7 +2079,7 @@ html {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 300px;
+  max-height: 320px;
 }
 @media (max-width: 1024px) {
   .catalog-accordion__content {
