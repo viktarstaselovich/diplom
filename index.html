@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" href="css/swiper-bundle.css">
@@ -1131,6 +1131,7 @@
     <section class="contacts" id="contacts">
       <div class="container">
         <div class="contacts-content">
+          <h2 class="contacts__title">Контакты</h2>
           <div class="contacts-showroom">
             <span class="contacts-showroom__name">Шоурум №4</span>
             <span class="contacts-showroom__adress">Леонтьевский переулок, дом 5/1</span>
@@ -1141,7 +1142,7 @@
                 id="name"></label>
             <label class="contacts-form__label">
               <input class="contacts-form__input" type="tel" name="phone" data-validate-field="tel"
-                data-validate-rules="phone" placeholder="Телефон*" inputmode="phone"></label>
+                data-validate-rules="phone" placeholder="Телефон*"></label>
             <button class="contacts-form__btn" type="submit">Заказать обратный звонок</button>
             <button class="contacts-form__btn-mobil" type="submit">Заказать</button>
           </form>
@@ -1195,7 +1196,9 @@
       </div>
     </section>
 
-    <section class="maps" id="map"></section>
+    <section class="maps" id="map">
+      <h2 class="maps__title">Карты</h2>
+    </section>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
     <script>
       ymaps.ready(init);

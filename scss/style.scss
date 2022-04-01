@@ -1374,21 +1374,23 @@ button {
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    background: url(../img/icons/btnprev.svg) center no-repeat #666666;
-    border: 2px solid transparent;
-    transition: border 0.4s ease-in-out, background 0.4s ease-in-out;
+    background: url(../img/icons/darkbtnnext.svg) center no-repeat;
+    transform: rotate(180deg);
+    transition: background 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background-color: $colorpurple;
-      transition: background 0.4 ease-in-out;
+      background: url(../img/icons/darkbtnhover.svg) center no-repeat;
+      transform: rotate(180deg);
+      transition: background 0.4s ease-in-out;
     }
     &:active {
-      background-color: $coloractive;
-      border: 2px solid #000000;
-      transition: border 0.4 ease-in-out, background 0.4 ease-in-out;
+      background: url(../img/icons/darkbtnactive.png) center no-repeat;
+      transform: rotate(180deg);
+      transition: background 0.4s ease-in-out;
     }
     &:focus {
-      border: 2px solid #000000;
-      transition: border 0.4 ease-in-out;
+      background: url(../img/icons/darkbtnfocus.svg) center no-repeat;
+      transform: rotate(180deg);
+      transition: background 0.4s ease-in-out;
     }
   }
 
@@ -1407,24 +1409,25 @@ button {
     border-radius: 100%;
     background: url(../img/icons/btnnext.svg) center no-repeat #666666;
     border: 1px solid transparent;
-    transition: border 0.4s ease-in-out, background 0.4s ease-in-out;
+    background: url(../img/icons/darkbtnnext.svg) center no-repeat;
+    transition: background 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background-color: $colorpurple;
-      transition: background 0.4 ease-in-out;
+      background: url(../img/icons/darkbtnhover.svg) center no-repeat;
+      transition: background 0.4s ease-in-out;
     }
     &:active {
-      background-color: $coloractive;
-      border: 2px solid #000000;
-      transition: border 0.4 ease-in-out, background 0.4 ease-in-out;
+      background: url(../img/icons/darkbtnactive.png) center no-repeat;
+      transition: background 0.4s ease-in-out;
     }
     &:focus {
-      border: 2px solid #000000;
-      transition: border 0.4 ease-in-out;
+      background: url(../img/icons/darkbtnfocus.svg) center no-repeat;
+      transition: background 0.4s ease-in-out;
     }
   }
 
   .swiper-button-disabled {
-    background-color: #ececec;
+    opacity: 0.6;
+    transition: opacity 0.4s ease-in-out;
   }
 }
 .gallery-slider {
@@ -3018,6 +3021,16 @@ button {
     flex-direction: column;
   }
 }
+.contacts__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
 .contacts-showroom {
   @media (max-width: 1024px) {
     margin-bottom: 30px;
@@ -3297,6 +3310,16 @@ button {
   }
   @media (max-width: 320px) {
     height: 320px;
+  }
+  &__title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
   }
 }
 
