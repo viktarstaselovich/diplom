@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" href="css/swiper-bundle.css">
@@ -431,13 +431,19 @@
         slidesPerColumn: 1,
         spaceBetween: 20,
         breakpoints: {
+          480: {
+            slidesPerView: 2,
+            slidesPerColumn: 1,
+            spaceBetween: 10,
+            slidesPerGroup: 2,
+          },
           768: {
             slidesPerView: 2,
             slidesPerColumn: 1,
             spaceBetween: 34,
             slidesPerGroup: 2,
           },
-          1050: {
+          1025: {
             slidesPerView: 3,
             spaceBetween: 50,
             slidesPerColumn: 1,
@@ -921,7 +927,7 @@
                   <img class="events-block__img" src="img/event/event1.jpeg" alt="">
                   <div class="events-block__bottom">
                     <span class="events-block__museum">Музей им. Щусева</span>
-                    <span class="events-block__dates">с 20 марта по 30 апреля</span>
+                    <time class="events-block__dates">с 20 марта по 30 апреля</time>
                     <h3 class="events-block__title">Книжная гравюра в живом восприятии</h3>
                     <p class="events-block__deskription">Один из ведущих флорентийских художников Кватроченто,
                       основатель
@@ -935,7 +941,7 @@
                   <img class="events-block__img" src="img/event/event2.jpeg" alt="">
                   <div class="events-block__bottom">
                     <span class="events-block__museum">ММОМА</span>
-                    <span class="events-block__dates">24 марта 19:00</span>
+                    <time class="events-block__dates">24 марта 19:00</time>
                     <h3 class="events-block__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
                     <p class="events-block__deskription">Высокий уровень вовлечения представителей целевой аудитории
                       является четким доказательством простого факта.</p>
@@ -948,7 +954,7 @@
                   <img class="events-block__img" src="img/event/event3.jpeg" alt="">
                   <div class="events-block__bottom">
                     <span class="events-block__museum">Еврейский музей</span>
-                    <span class="events-block__dates">с 31 марта по 21 апреля</span>
+                    <time class="events-block__dates">с 31 марта по 21 апреля</time>
                     <h3 class="events-block__title">Выставка «Формация 2020»</h3>
                     <p class="events-block__deskription">Идейные соображения высшего порядка, а также современная
                       методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
@@ -961,7 +967,7 @@
                   <img class="events-block__img" src="img/event/event4.jpeg" alt="">
                   <div class="events-block__bottom">
                     <span class="events-block__museum">ММАМ</span>
-                    <span class="events-block__dates">с 8 епреля по 20 мая</span>
+                    <time class="events-block__dates">с 8 епреля по 20 мая</time>
                     <h3 class="events-block__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
                     <p class="events-block__deskription">Один из ведущих флорентийских художников Кватроченто,
                       основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
@@ -974,7 +980,7 @@
                   <img class="events-block__img" src="img/event/event5.jpeg" alt="">
                   <div class="events-block__bottom">
                     <span class="events-block__museum">Третьяковка на Крымском валу</span>
-                    <span class="events-block__dates">с 30 мирта по 30 апреля</span>
+                    <time class="events-block__dates">с 30 мирта по 30 апреля</time>
                     <h3 class="events-block__title">XXIV Международная биеннале молодого искусства</h3>
                     <p class="events-block__deskription">Внезапно, реплицированные с зарубежных источников,
                       современные исследования.</p>
@@ -1001,6 +1007,12 @@
 
         breakpoints: {
           321: {
+            slidesPerView: 1,
+            slidesPerColumn: 1,
+            spaceBetween: 25,
+            slidesPerGroup: 1,
+          },
+          550: {
             slidesPerView: 2,
             slidesPerColumn: 1,
             spaceBetween: 34,
@@ -1101,6 +1113,12 @@
 
         breakpoints: {
           321: {
+            slidesPerView: 1,
+            slidesPerColumn: 1,
+            spaceBetween: 25,
+            slidesPerGroup: 1,
+          },
+          550: {
             slidesPerView: 2,
             slidesPerColumn: 1,
             spaceBetween: 34,
