@@ -1,25 +1,35 @@
-$(document).ready(function () {
+// $(document).ready(function () {
 
-  $.each($('.gallery-form__period'), function (index, val) {
-    if ($(this).find('input').prop('checked') == true) {
-      $(this).addClass('active');
-    }
-  });
-  $(document).on('click', '.gallery-form__period', function (event) {
-    if ($(this).hasClass('active')) {
-      $(this).find('input').prop('checked', false);
-    } else {
-      $(this).find('input').prop('checked', true);
-    }
-    $(this).toggleClass('active');
+//   $.each($('.gallery-form__period'), function (index, val) {
+//     if ($(this).find('input').prop('checked') == true) {
+//       $(this).addClass('active');
+//     }
+//   });
+//   $(document).on('click', '.gallery-form__period', function (event) {
+//     if ($(this).hasClass('active')) {
+//       $(this).find('input').prop('checked', false);
+//     } else {
+//       $(this).find('input').prop('checked', true);
+//     }
+//     $(this).toggleClass('active');
 
-    return false;
-  });
-});
+//     return false;
+//   });
+// });
 
 
-/*CATALOG - ACCORDION*/
+
 window.addEventListener('DOMContentLoaded', function () {
+
+
+  document.querySelectorAll('.gallery-form__period').forEach(function (gallery) {
+    gallery.addEventListener('click', function () {
+      gallery.classList.toggle('active')
+      console.log(gallery);
+    })
+  })
+
+  /*CATALOG - ACCORDION*/
   document.querySelectorAll('.catalog-accordion__btn').forEach(function (catalogLink) {
     catalogLink.addEventListener('click', function (authors) {
       const author = authors.currentTarget.dataset.author
@@ -41,20 +51,15 @@ window.addEventListener('DOMContentLoaded', function () {
       document.querySelector(`[data-author="${author}"]`).classList.add('catalog-accordion__btn-active')
     })
   })
-})
 
-
-/*HEADER - ART, HEADER - BURGER, FORM */
-window.addEventListener('DOMContentLoaded', function () {
+  /*HEADER - ART, HEADER - BURGER, FORM */
   document.querySelectorAll('.header-bottom__btn').forEach(function (artList) {
     artList.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path
-
       document.querySelector(`[data-target="${path}"]`).classList.toggle('header-art__is-open');
       document.querySelector(`[data-path="${path}"]`).classList.toggle('button-back')
     })
   })
-
   document.querySelector('#burger').addEventListener('click', function () {
     document.querySelector('#menu').classList.toggle('is-active');
     document.querySelector('#burger').classList.toggle('hello')
@@ -64,63 +69,38 @@ window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#search-btn').classList.toggle('search-desktop__active');
   })
 
+  /*TOOLTIP*/
   document.querySelectorAll('.project-tooltip__link').forEach(function (toolTip) {
     toolTip.addEventListener('click', function (tooltip) {
       const toollink = tooltip.currentTarget.dataset.toollink
       document.querySelector(`[data-tooltext="${toollink}"]`).classList.toggle('tooltip-text-active');
       document.querySelector(`[data-toollink="${toollink}"]`).classList.toggle('tooltip-active');
     })
-    toolTip.addEventListener('mouseenter', function (hello) {
-      const toollink = hello.currentTarget.dataset.toollink
+    toolTip.addEventListener('mouseenter', function (firstFunc) {
+      const toollink = firstFunc.currentTarget.dataset.toollink
       document.querySelector(`[data-tooltext="${toollink}"]`).classList.add('tooltip-text-active');
       document.querySelector(`[data-toollink="${toollink}"]`).classList.add('tooltip-active');
     })
-    toolTip.addEventListener('mouseleave', function (holla) {
-      const toollink = holla.currentTarget.dataset.toollink
+    toolTip.addEventListener('mouseleave', function (secondFunc) {
+      const toollink = secondFunc.currentTarget.dataset.toollink
       document.querySelector(`[data-tooltext="${toollink}"]`).classList.remove('tooltip-text-active');
       document.querySelector(`[data-toollink="${toollink}"]`).classList.remove('tooltip-active');
     })
 
-    toolTip.addEventListener('focus', function (holla) {
-      const toollink = holla.currentTarget.dataset.toollink
+    toolTip.addEventListener('focus', function (thirdFunc) {
+      const toollink = thirdFunc.currentTarget.dataset.toollink
       document.querySelector(`[data-tooltext="${toollink}"]`).classList.add('tooltip-text-active');
       document.querySelector(`[data-toollink="${toollink}"]`).classList.add('tooltip-active');
     })
 
-    toolTip.addEventListener('blur', function (holla) {
-      const toollink = holla.currentTarget.dataset.toollink
+    toolTip.addEventListener('blur', function (fourthFunc) {
+      const toollink = fourthFunc.currentTarget.dataset.toollink
       document.querySelector(`[data-tooltext="${toollink}"]`).classList.remove('tooltip-text-active');
       document.querySelector(`[data-toollink="${toollink}"]`).classList.remove('tooltip-active');
     })
   })
 
-
-  /*ОТПРАВКА ФОРМЫ*/
-  const form = document.getElementById('contacts-form');
-  form.addEventListener('submit', formSend);
-
-  async function formSend(e) {
-    e.preventDefault();
-
-    let formData = new FormData(form);
-
-    let response = await fetch('sendmail.php', {
-      method: 'POST',
-      body: formData
-    })
-    if (response.ok) {
-      let result = await response.json();
-      alert(result, message);
-      form.reset();
-    } else {
-      alert("Ошибка");
-    }
-  }
-})
-
-
-/* MODAL */
-document.addEventListener("DOMContentLoaded", function () {
+  /* MODAL */
   var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
   console.log(scrollbar);
   document.querySelector('[href="#openModal"]').addEventListener('click', function () {
@@ -185,5 +165,25 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = 'visible';
     document.querySelector('#openModal6').style.marginLeft = '0px';
   });
+  /*ОТПРАВКА ФОРМЫ*/
+  const form = document.getElementById('contacts-form');
+  form.addEventListener('submit', formSend);
 
+  async function formSend(e) {
+    e.preventDefault();
+
+    let formData = new FormData(form);
+
+    let response = await fetch('sendmail.php', {
+      method: 'POST',
+      body: formData
+    })
+    if (response.ok) {
+      let result = await response.json();
+      alert(result, message);
+      form.reset();
+    } else {
+      alert("Ошибка");
+    }
+  }
 });

@@ -991,7 +991,7 @@ button {
     background-size: 105% 105%;
   }
   100% {
-    background-image: url(../img/hero/heropreview3.jpg);
+    background-image: url(../img/hero/hero3.jpg);
     background-size: 100% 100%;
   }
 }
@@ -1363,7 +1363,6 @@ button {
     display: none;
   }
 }
-
 .gallery-right {
   padding-top: 24px;
   display: flex;
@@ -1670,12 +1669,16 @@ button {
 }
 
 .modal-title {
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
   color: #333333;
 }
 .modal-name {
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -1695,6 +1698,7 @@ button {
   }
 }
 .modal-description {
+  margin: 0;
   font-size: 16px;
   line-height: 22px;
   color: #333333;
@@ -2232,7 +2236,7 @@ button {
     padding: 13px 50px 43px 50px;
     @media (max-width: 1024px) {
       padding: 14px 16px 49px 34px;
-      min-height: 483px;
+      min-height: 525px;
     }
     @media (max-width: 768px) {
       padding: 14px 18px 48px 37px;
