@@ -30,25 +30,25 @@ window.addEventListener('DOMContentLoaded', function () {
   })
 
   /*CATALOG - ACCORDION*/
-  document.querySelectorAll('.catalog-accordion__btn').forEach(function (catalogLink) {
+  document.querySelectorAll('.catalog__accordion-btn').forEach(function (catalogLink) {
     catalogLink.addEventListener('click', function (authors) {
       const author = authors.currentTarget.dataset.author
 
-      document.querySelectorAll('.catalog-bottom__left').forEach(function (tabContent) {
-        tabContent.classList.remove('catalog-author__img-active')
+      document.querySelectorAll('.catalog__bottom-left').forEach(function (tabContent) {
+        tabContent.classList.remove('catalog__bottom-author-active')
       })
-      document.querySelector(`[data-authorimg="${author}"]`).classList.add('catalog-author__img-active')
+      document.querySelector(`[data-authorimg="${author}"]`).classList.add('catalog__bottom-author-active')
     })
   })
-  document.querySelectorAll('.catalog-accordion__btn').forEach(function (catalogsLink) {
+  document.querySelectorAll('.catalog__accordion-btn').forEach(function (catalogsLink) {
     catalogsLink.addEventListener('click', function (authors) {
       const author = authors.currentTarget.dataset.author
 
-      document.querySelectorAll('.catalog-accordion__btn').forEach(function (changeLink) {
-        changeLink.classList.remove('catalog-accordion__btn-active')
+      document.querySelectorAll('.catalog__accordion-btn').forEach(function (changeLink) {
+        changeLink.classList.remove('catalog__accordion-btn-active')
       })
 
-      document.querySelector(`[data-author="${author}"]`).classList.add('catalog-accordion__btn-active')
+      document.querySelector(`[data-author="${author}"]`).classList.add('catalog__accordion-btn-active')
     })
   })
 
@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', function () {
   })
 
   /*TOOLTIP*/
-  document.querySelectorAll('.project-tooltip__link').forEach(function (toolTip) {
+  document.querySelectorAll('.projects__tooltip-link').forEach(function (toolTip) {
     toolTip.addEventListener('click', function (tooltip) {
       const toollink = tooltip.currentTarget.dataset.toollink
       document.querySelector(`[data-tooltext="${toollink}"]`).classList.toggle('tooltip-text-active');
