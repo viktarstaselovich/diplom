@@ -1,30 +1,30 @@
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Light.woff2") format("woff2") url("../fonts/OpenSans-Light.woff") format("woff");
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2") url("../fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Medium.woff2") format("woff2") url("../fonts/OpenSans-Medium.woff") format("woff");
+  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2") url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2") url("../fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -38,18 +38,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-h2 {
-  font-weight: 400;
-}
-
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 div {
@@ -62,6 +56,8 @@ a {
 
 input,
 button {
+  cursor: pointer;
+  outline: none;
   box-sizing: border-box;
   border: none;
 }
@@ -203,6 +199,8 @@ button {
 
   &__list {
     display: flex;
+    margin: 0;
+    padding: 0;
     width: 763px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -434,6 +432,8 @@ button {
   }
   &__list {
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-wrap: wrap;
     margin-left: -4px;
   }
@@ -540,6 +540,8 @@ button {
 }
 
 .header-bottom__artmenu-list {
+  margin: 0;
+  padding: 0;
   height: 220px;
 }
 
@@ -887,6 +889,8 @@ button {
 }
 
 .main-title {
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1118,8 +1122,11 @@ button {
   }
 
   &__title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 16px;
     font-size: 48px;
+    font-weight: 400;
     line-height: 65px;
     color: #333333;
     @media (max-width: 1024px) {
@@ -1134,6 +1141,8 @@ button {
   }
 
   &__text {
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     line-height: 32px;
     color: #333333;
@@ -1177,8 +1186,11 @@ button {
   }
 
   &__title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 16px;
     font-size: 48px;
+    font-weight: 400;
     line-height: 65px;
     color: #ffffff;
     @media (max-width: 1024px) {
@@ -1733,6 +1745,7 @@ button {
 }
 .modal-description {
   margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 22px;
   color: #333333;
@@ -1775,8 +1788,11 @@ button {
   }
 
   &__title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 16px;
     font-size: 48px;
+    font-weight: 400;
     line-height: 65px;
     color: #333333;
     @media (max-width: 1024px) {
@@ -1791,6 +1807,8 @@ button {
   }
 
   &__text {
+    margin: 0;
+    padding: 0;
     margin-bottom: 39px;
     max-width: 1080px;
     font-size: 16px;
@@ -1850,6 +1868,8 @@ button {
   }
 
   &__bottom-name {
+    margin: 0;
+    padding: 0;
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 24px;
@@ -1876,6 +1896,8 @@ button {
   }
 
   &__bottom-description {
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     line-height: 32px;
     color: #333333;
@@ -2039,8 +2061,14 @@ button {
 }
 
 .catalog {
+  &__bottom-accordion {
+    margin: 0;
+    padding: 0;
+  }
   &__accordion-content {
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 320px;
@@ -2054,7 +2082,10 @@ button {
       max-height: max-content;
     }
   }
-
+  &__accordion-title {
+    margin: 0;
+    padding: 0;
+  }
   &__accordion-item {
     margin-bottom: 5px;
     &:first-child {
@@ -2149,6 +2180,8 @@ button {
   }
 
   &__accordion-empty-title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 5px;
     font-weight: 600;
     font-size: 24px;
@@ -2164,6 +2197,8 @@ button {
   }
 
   &__accordion-empty-description {
+    margin: 0;
+    padding: 0;
     margin-bottom: 5px;
     font-size: 16px;
     line-height: 22px;
@@ -2199,8 +2234,11 @@ button {
   }
 
   &__title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 16px;
     font-size: 48px;
+    font-weight: 400;
     line-height: 65px;
     color: #333333;
     @media (max-width: 1024px) {
@@ -2322,6 +2360,8 @@ button {
   }
 
   &__block-title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 7px;
     font-weight: 600;
     font-size: 24px;
@@ -2339,6 +2379,8 @@ button {
   }
 
   &__block-deskription {
+    margin: 0;
+    padding: 0;
     flex: 1 1 auto;
     font-size: 16px;
     line-height: 32px;
@@ -2504,8 +2546,11 @@ button {
   }
 
   &__title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 16px;
     font-size: 48px;
+    font-weight: 400;
     line-height: 65px;
 
     color: #333333;
@@ -2521,6 +2566,8 @@ button {
   }
 
   &__text {
+    margin: 0;
+    padding: 0;
     margin-bottom: 20px;
     max-width: 1060px;
     font-size: 16px;
@@ -3086,6 +3133,8 @@ button {
   }
 }
 .contacts__title {
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -3379,6 +3428,8 @@ button {
     height: 320px;
   }
   &__title {
+    margin: 0;
+    padding: 0;
     position: absolute;
     width: 1px;
     height: 1px;

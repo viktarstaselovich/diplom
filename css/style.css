@@ -1,31 +1,31 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Light.woff2") format("woff2") url("../fonts/OpenSans-Light.woff") format("woff");
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2") url("../fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Medium.woff2") format("woff2") url("../fonts/OpenSans-Medium.woff") format("woff");
+  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2") url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2") url("../fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -33,18 +33,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-h2 {
-  font-weight: 400;
-}
-
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 div {
@@ -57,6 +51,8 @@ a {
 
 input,
 button {
+  cursor: pointer;
+  outline: none;
   box-sizing: border-box;
   border: none;
 }
@@ -82,7 +78,7 @@ button {
   background-position: center;
   background-size: cover;
   -webkit-animation: animHero 20s alternate linear infinite;
-  animation: animHero 20s alternate linear infinite;
+          animation: animHero 20s alternate linear infinite;
 }
 
 .burger {
@@ -205,6 +201,8 @@ button {
 }
 .header-top__list {
   display: flex;
+  margin: 0;
+  padding: 0;
   width: 763px;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -438,6 +436,8 @@ button {
 }
 .header-bottom__list {
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-wrap: wrap;
   margin-left: -4px;
 }
@@ -566,6 +566,8 @@ button {
 }
 
 .header-bottom__artmenu-list {
+  margin: 0;
+  padding: 0;
   height: 220px;
 }
 
@@ -741,8 +743,7 @@ button {
 }
 
 .header-bottom__artmenu-real-three:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/realthree.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/realthree.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
@@ -754,57 +755,49 @@ button {
 }
 
 .header-bottom__artmenu-impress-one:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/impresone.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/impresone.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-impress-two:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/imprestwo.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/imprestwo.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-impress-three:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/impresthree.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/impresthree.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-impress-four:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/impresfour.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/impresfour.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-postimpress-one:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/postimpresone.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/postimpresone.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-postimpress-two:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/postimprestwo.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/postimprestwo.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-postimpress-three:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/postimpresthree.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/postimpresthree.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-postimpress-four:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/postimpresfour.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/postimpresfour.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
@@ -822,43 +815,37 @@ button {
 }
 
 .header-bottom__artmenu-avang-three:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/avangthree.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/avangthree.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-avang-four:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/avangfour.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/avangfour.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-future-one:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/futureone.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/futureone.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-future-two:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/futuretwo.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/futuretwo.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-future-three:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/futurethree.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/futurethree.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
 
 .header-bottom__artmenu-future-four:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
-    url(../img/header/futurefour.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(../img/header/futurefour.jpg);
   background-size: cover;
   transition: background 0.4s ease-in-out;
 }
@@ -912,6 +899,8 @@ button {
 }
 
 .main-title {
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1228,8 +1217,11 @@ button {
   }
 }
 .about-us__title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 16px;
   font-size: 48px;
+  font-weight: 400;
   line-height: 65px;
   color: #333333;
 }
@@ -1241,6 +1233,8 @@ button {
   }
 }
 .about-us__text {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 32px;
   color: #333333;
@@ -1288,8 +1282,11 @@ button {
   }
 }
 .gallery__title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 16px;
   font-size: 48px;
+  font-weight: 400;
   line-height: 65px;
   color: #ffffff;
 }
@@ -1370,18 +1367,18 @@ button {
   }
 }
 
-.choices[data-type*="select-one"]:after {
+.choices[data-type*=select-one]:after {
   content: url(../img/icons/dropdown.svg);
   border: none;
   top: 12px;
   right: 25px;
 }
 
-.choices[data-type*="select-one"].is-open:after {
+.choices[data-type*=select-one].is-open:after {
   content: url(../img/icons/dropdown_gallery_active.svg);
 }
 
-.choices[data-type*="select-one"] .choices__inner {
+.choices[data-type*=select-one] .choices__inner {
   box-sizing: border-box;
   padding-top: 0;
   padding-bottom: 2px;
@@ -1858,6 +1855,7 @@ button {
 
 .modal-description {
   margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 22px;
   color: #333333;
@@ -1905,8 +1903,11 @@ button {
   }
 }
 .catalog__title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 16px;
   font-size: 48px;
+  font-weight: 400;
   line-height: 65px;
   color: #333333;
 }
@@ -1918,6 +1919,8 @@ button {
   }
 }
 .catalog__text {
+  margin: 0;
+  padding: 0;
   margin-bottom: 39px;
   max-width: 1080px;
   font-size: 16px;
@@ -1976,6 +1979,8 @@ button {
   }
 }
 .catalog__bottom-name {
+  margin: 0;
+  padding: 0;
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 24px;
@@ -1996,6 +2001,8 @@ button {
   color: #999999;
 }
 .catalog__bottom-description {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 32px;
   color: #333333;
@@ -2165,8 +2172,14 @@ button {
   line-height: 26px;
 }
 
+.catalog__bottom-accordion {
+  margin: 0;
+  padding: 0;
+}
 .catalog__accordion-content {
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 320px;
@@ -2187,6 +2200,10 @@ button {
     max-height: -moz-max-content;
     max-height: max-content;
   }
+}
+.catalog__accordion-title {
+  margin: 0;
+  padding: 0;
 }
 .catalog__accordion-item {
   margin-bottom: 5px;
@@ -2264,6 +2281,8 @@ button {
   }
 }
 .catalog__accordion-empty-title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 24px;
@@ -2276,6 +2295,8 @@ button {
   }
 }
 .catalog__accordion-empty-description {
+  margin: 0;
+  padding: 0;
   margin-bottom: 5px;
   font-size: 16px;
   line-height: 22px;
@@ -2303,8 +2324,11 @@ button {
   }
 }
 .events__title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 16px;
   font-size: 48px;
+  font-weight: 400;
   line-height: 65px;
   color: #333333;
 }
@@ -2427,6 +2451,8 @@ button {
   }
 }
 .events__block-title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 7px;
   font-weight: 600;
   font-size: 24px;
@@ -2449,6 +2475,8 @@ button {
   }
 }
 .events__block-deskription {
+  margin: 0;
+  padding: 0;
   flex: 1 1 auto;
   font-size: 16px;
   line-height: 32px;
@@ -2597,8 +2625,11 @@ button {
   }
 }
 .projects__title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 16px;
   font-size: 48px;
+  font-weight: 400;
   line-height: 65px;
   color: #333333;
 }
@@ -2610,6 +2641,8 @@ button {
   }
 }
 .projects__text {
+  margin: 0;
+  padding: 0;
   margin-bottom: 20px;
   max-width: 1060px;
   font-size: 16px;
@@ -2679,9 +2712,7 @@ button {
   transition: background 0.4s ease-in-out;
 }
 @media (max-width: 1024px) {
-  .projects__tooltip-link:hover,
-  .projects__tooltip-link:active,
-  .projects__tooltip-link:focus {
+  .projects__tooltip-link:hover, .projects__tooltip-link:active, .projects__tooltip-link:focus {
     background-image: url(../img/icons/tooltipclose.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -3221,6 +3252,8 @@ button {
 }
 
 .contacts__title {
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -3526,6 +3559,8 @@ button {
   }
 }
 .maps__title {
+  margin: 0;
+  padding: 0;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -3536,7 +3571,7 @@ button {
   clip: rect(0 0 0 0);
 }
 
-[class*="ground-pane"] {
+[class*=ground-pane] {
   filter: grayscale(1);
 }
 
@@ -3643,7 +3678,7 @@ button {
 
 @media (max-width: 1024px) {
   .ymaps-2-1-79-user-selection-none,
-  .ymaps-2-1-79-controls__control {
+.ymaps-2-1-79-controls__control {
     display: none;
   }
 }
