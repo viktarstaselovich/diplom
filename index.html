@@ -213,18 +213,26 @@
               <option class="gallery-left__filter-item" value="1">Скульптура</option>
             </select>
             <form class="gallery-form">
-              <input class="gallery-form__checkbox" type="checkbox" name="checkbox_1">
-              <label class="gallery-form__period">
-                XIX век
-              </label>
-              <input class="gallery-form__checkbox" checked type="checkbox" name="checkbox_2">
-              <label class="gallery-form__period active">
-                XX век
-              </label>
-              <input class=" gallery-form__checkbox" type="checkbox" name="checkbox_3">
-              <label class="gallery-form__period">
-                Современность
-              </label>
+              <ul class="gallery-form__list">
+                <li>
+                  <input class="gallery-form__checkbox" type="checkbox" name="checkbox_1">
+                  <label class="gallery-form__period" tabindex="0">
+                    XIX век
+                  </label>
+                </li>
+                <li>
+                  <input class="gallery-form__checkbox" checked type="checkbox" name="checkbox_2">
+                  <label class="gallery-form__period active" tabindex="0">
+                    XX век
+                  </label>
+                </li>
+                <li>
+                  <input class=" gallery-form__checkbox" type="checkbox" name="checkbox_3">
+                  <label class="gallery-form__period" tabindex="0">
+                    Современность
+                  </label>
+                </li>
+              </ul>
               <button class="gallery-form__btn" type="submit"></button>
             </form>
           </div>
@@ -239,7 +247,7 @@
                 <div class="gallery-slider__wrapper swiper-wrapper">
                   <div class="gallery-slider__slide swiper-slide">
                     <div class="gallery-slider__imgblock">
-                      <a class="gallery-slider__link" href="#openModal">
+                      <a class="gallery-slider__link" href="#openModal" tabindex="0">
                         <img class="gallery-slider__imgdesktop" src="img/gallery/gallery1.jpeg" alt="Картинка">
                         <img class="gallery-slider__imgmobil" src="img/gallery/gallerymobil1.jpg" alt="Картинка">
                       </a>
@@ -247,7 +255,7 @@
                   </div>
                   <div class="gallery-slider__slide swiper-slide">
                     <div class="gallery-slider__imgblock">
-                      <a class="gallery-slider__link" href="#openModal2">
+                      <a class="gallery-slider__link" href="#openModal2" tabindex="0">
                         <img class="gallery-slider__imgdesktop" src="img/gallery/gallery2.jpeg" alt="Картинка">
                         <img class="gallery-slider__imgmobil" src="img/gallery/gallerymobil2.png" alt="Картинка">
                       </a>
@@ -255,7 +263,7 @@
                   </div>
                   <div class="gallery-slider__slide swiper-slide">
                     <div class="gallery-slider__imgblock">
-                      <a class="gallery-slider__link" href="#openModal3">
+                      <a class="gallery-slider__link" href="#openModal3" tabindex="0">
                         <img class="gallery-slider__imgdesktop" src="img/gallery/gallery3.jpeg" alt="Картинка">
                         <img class="gallery-slider__imgmobil" src="img/gallery/gallerymobil3.png" alt="Картинка">
                       </a>
@@ -263,7 +271,7 @@
                   </div>
                   <div class="gallery-slider__slide swiper-slide">
                     <div class="gallery-slider__imgblock">
-                      <a class="gallery-slider__link" href="#openModal4">
+                      <a class="gallery-slider__link" href="#openModal4" tabindex="0">
                         <img class="gallery-slider__imgdesktop" src="img/gallery/gallery4.jpeg" alt="Картинка">
                         <img class="gallery-slider__imgmobil" src="img/gallery/gallerymobil4.png" alt="Картинка">
                       </a>
@@ -271,7 +279,7 @@
                   </div>
                   <div class="gallery-slider__slide swiper-slide">
                     <div class="gallery-slider__imgblock">
-                      <a class="gallery-slider__link" href="#openModal5">
+                      <a class="gallery-slider__link" href="#openModal5" tabindex="0">
                         <img class="gallery-slider__imgdesktop" src="img/gallery/gallery5.jpeg" alt="Картинка">
                         <img class="gallery-slider__imgmobil" src="img/gallery/gallerymobil5.png" alt="Картинка">
                       </a>
@@ -279,7 +287,7 @@
                   </div>
                   <div class="gallery-slider__slide swiper-slide">
                     <div class="gallery-slider__imgblock">
-                      <a class="gallery-slider__link" href="#openModal6">
+                      <a class="gallery-slider__link" href="#openModal6" tabindex="0">
                         <img class="gallery-slider__imgdesktop" src="img/gallery/gallery6.jpeg" alt="Картинка">
                         <img class="gallery-slider__imgmobil" src="img/gallery/gallerymobil6.png" alt="Картинка">
                       </a>
@@ -835,7 +843,7 @@
                       <p class="catalog__accordion-empty-description">А в галерее вы всегда можете найти что-то
                         интересное
                         для себя</p>
-                      <a href="" class="catalog__accordion-empty-link">В галерею</a>
+                      <a href="#gallery" class="catalog__accordion-empty-link" tabindex="0">В галерею</a>
                     </div>
                   </div>
                 </li>
@@ -849,7 +857,7 @@
                       <p class="catalog__accordion-empty-description">А в галерее вы всегда можете найти что-то
                         интересное
                         для себя</p>
-                      <a href="" class="catalog__accordion-empty-link">В галерею</a>
+                      <a href="#gallery" class="catalog__accordion-empty-link" tabindex="0">В галерею</a>
                     </div>
                   </div>
                 </li>
@@ -863,7 +871,7 @@
                       <p class="catalog__accordion-empty-description">А в галерее вы всегда можете найти что-то
                         интересное
                         для себя</p>
-                      <a href="" class="catalog__accordion-empty-link">В галерею</a>
+                      <a href="#gallery" class="catalog__accordion-empty-link" tabindex="0">В галерею</a>
                     </div>
                   </div>
                 </li>
@@ -877,7 +885,7 @@
                       <p class="catalog__accordion-empty-description">А в галерее вы всегда можете найти что-то
                         интересное
                         для себя</p>
-                      <a href="" class="catalog__accordion-empty-link">В галерею</a>
+                      <a href="#gallery" class="catalog__accordion-empty-link" tabindex="0">В галерею</a>
                     </div>
                   </div>
                 </li>
@@ -891,7 +899,7 @@
                       <p class="catalog__accordion-empty-description">А в галерее вы всегда можете найти что-то
                         интересное
                         для себя</p>
-                      <a href="" class="catalog__accordion-empty-link">В галерею</a>
+                      <a href="#gallery" class="catalog__accordion-empty-link" tabindex="0">В галерею</a>
                     </div>
                   </div>
                 </li>
@@ -905,7 +913,7 @@
                       <p class="catalog__accordion-empty-description">А в галерее вы всегда можете найти что-то
                         интересное
                         для себя</p>
-                      <a href="" class="catalog__accordion-empty-link">В галерею</a>
+                      <a href="#gallery" class="catalog__accordion-empty-link" tabindex="0">В галерею</a>
                     </div>
                   </div>
                 </li>
@@ -933,9 +941,7 @@
                     <p class="events__block-deskription">Один из ведущих флорентийских художников Кватроченто,
                       основатель
                       художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                    <div class="events__block-link-wrapper" tabindex="0"><a tabindex="-1" href="#"
-                        class="events__block-link">Подробнее</a>
-                    </div>
+                    <a tabindex="0" href="#" class="events__block-link">Подробнее</a>
                   </div>
                 </div>
                 <div class="events__block swiper-slide">
@@ -946,9 +952,7 @@
                     <h3 class="events__block-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
                     <p class="events__block-deskription">Высокий уровень вовлечения представителей целевой аудитории
                       является четким доказательством простого факта.</p>
-                    <div class="events__block-link-wrapper" tabindex="0"><a tabindex="-1" href="#"
-                        class="events__block-link">Подробнее</a>
-                    </div>
+                    <a tabindex="0" href="#" class="events__block-link">Подробнее</a>
                   </div>
                 </div>
                 <div class="events__block swiper-slide">
@@ -959,9 +963,7 @@
                     <h3 class="events__block-title">Выставка «Формация 2020»</h3>
                     <p class="events__block-deskription">Идейные соображения высшего порядка, а также современная
                       методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
-                    <div class="events__block-link-wrapper" tabindex="0"><a tabindex="-1" href="#"
-                        class="events__block-link">Подробнее</a>
-                    </div>
+                    <a tabindex="0" href="#" class="events__block-link">Подробнее</a>
                   </div>
                 </div>
                 <div class="events__block swiper-slide">
@@ -972,9 +974,7 @@
                     <h3 class="events__block-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
                     <p class="events__block-deskription">Один из ведущих флорентийских художников Кватроченто,
                       основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                    <div class="events__block-link-wrapper" tabindex="0"><a tabindex="-1" href="#"
-                        class="events__block-link">Подробнее</a>
-                    </div>
+                    <a tabindex="0" href="#" class="events__block-link">Подробнее</a>
                   </div>
                 </div>
                 <div class="events__block swiper-slide">
@@ -985,9 +985,7 @@
                     <h3 class="events__block-title">XXIV Международная биеннале молодого искусства</h3>
                     <p class="events__block-deskription">Внезапно, реплицированные с зарубежных источников,
                       современные исследования.</p>
-                    <div class="events__block-link-wrapper" tabindex="0"><a tabindex="-1" href="#"
-                        class="events__block-link">Подробнее</a>
-                    </div>
+                    <a tabindex="0" href="#" class="events__block-link">Подробнее</a>
                   </div>
                 </div>
               </div>
@@ -1078,24 +1076,33 @@
             <div class="projects__partners-content">
               <div class="projects-partners swiper-container">
                 <div class="swiper-wrapper">
-                  <div class="projects-partners__block projects-partners__block-one swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-two swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-three swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-four swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-five swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-six swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-seven swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-eight swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
-                  <div class="projects-partners__block projects-partners__block-nine swiper-slide" tabindex="0"><a
-                      tabindex="-1" href="" class="projects-partners__link"></a></div>
+                  <div class="projects-partners__block  swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-one"
+                        src="img/projects/projectshover1.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-two"
+                        src="img/projects/projectshover2.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-three"
+                        src="img/projects/projectshover3.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-four"
+                        src="img/projects/projectshover4.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-five"
+                        src="img/projects/projectshover5.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-six"
+                        src="img/projects/projectshover6.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-seven"
+                        src="img/projects/projectshover7.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-eight"
+                        src="img/projects/projectshover8.png" alt=""></a></div>
+                  <div class="projects-partners__block swiper-slide" tabindex="0"><a tabindex="-1" href=""
+                      class="projects-partners__link"><img class="projects-partners__img-nine"
+                        src="img/projects/projectshover9.png" alt=""></a></div>
                 </div>
               </div>
             </div>
@@ -1311,9 +1318,19 @@
         <div class="footer__content">
           <a class="footer__logo" href=""><img class="footer__logo-img" src="img/header/logo.png" alt="Логотип"></a>
           <div class="footer-social">
-            <a href="https://vk.com/" class="footer-social__link footer-social__vk"></a>
-            <a href="https://www.instagram.com/" class="footer-social__link footer-social__inst"></a>
-            <a href="https://ru-ru.facebook.com/" class="footer-social__link footer-social__facebook"></a>
+            <ul class="footer-social__list">
+              <li class="footer-social__item">
+                <a href="https://vk.com/" class="footer-social__link footer-social__vk"></a>
+              </li>
+              <li class="footer-social__item">
+                <a href="https://www.instagram.com/" class="footer-social__link footer-social__inst"></a>
+              </li>
+              <li class="footer-social__item">
+                <a href="https://ru-ru.facebook.com/" class="footer-social__link footer-social__facebook"></a>
+              </li>
+            </ul>
+
+
           </div>
         </div>
       </div>

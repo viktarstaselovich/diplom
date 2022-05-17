@@ -34,6 +34,10 @@ $coloractive: #7943a4;
 $coloreasy: #c283f3;
 $colorblack: #333333;
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,19 +50,15 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-div {
-  box-sizing: border-box;
-}
-
 a {
   text-decoration: none;
 }
 
 input,
-button {
+button,
+a {
   cursor: pointer;
   outline: none;
-  box-sizing: border-box;
   border: none;
 }
 
@@ -204,6 +204,7 @@ button {
     width: 763px;
     flex-wrap: wrap;
     justify-content: space-between;
+    list-style-type: none;
     @media (max-width: 1024px) {
       width: 100%;
       flex-direction: column;
@@ -436,6 +437,7 @@ button {
     padding: 0;
     flex-wrap: wrap;
     margin-left: -4px;
+    list-style-type: none;
   }
 
   &__item {
@@ -543,6 +545,7 @@ button {
   margin: 0;
   padding: 0;
   height: 220px;
+  list-style-type: none;
 }
 
 .header-bottom__artmenu-link {
@@ -1334,8 +1337,8 @@ button {
 }
 
 .gallery-form {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   @media (max-width: 1024px) {
   }
   @media (max-width: 768px) {
@@ -1343,6 +1346,11 @@ button {
   }
   @media (max-width: 320px) {
     margin-bottom: 20px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
   &__period {
     cursor: pointer;
@@ -1352,6 +1360,7 @@ button {
     line-height: 32px;
     color: #ffffff;
     transition: color 0.4s ease-in-out;
+    outline: none;
     &:hover {
       color: $coloreasy;
       transition: color 0.4s ease-in-out;
@@ -1366,7 +1375,7 @@ button {
       width: 12px;
       height: 12px;
       left: 0;
-      top: 30%;
+      top: 20%;
       border: 1px solid #ffffff;
       transition: border 0.4s ease-in-out;
     }
@@ -1376,7 +1385,7 @@ button {
       width: 5px;
       height: 5px;
       left: 5px;
-      top: 45%;
+      top: 40%;
       background: url(../img/icons/ellipse.svg) no-repeat;
       opacity: 0;
       transition: opacity 0.4s ease-in-out;
@@ -1455,6 +1464,7 @@ button {
     background: url(../img/icons/darkbtnnext.svg) center no-repeat;
     transform: rotate(180deg);
     transition: background 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    outline: none;
     &:hover {
       background: url(../img/icons/darkbtnhover.svg) center no-repeat;
       transform: rotate(180deg);
@@ -1489,6 +1499,7 @@ button {
     border: 1px solid transparent;
     background: url(../img/icons/darkbtnnext.svg) center no-repeat;
     transition: background 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    outline: none;
     &:hover {
       background: url(../img/icons/darkbtnhover.svg) center no-repeat;
       transition: background 0.4s ease-in-out;
@@ -1547,6 +1558,10 @@ button {
       transition: opacity 0.4s ease-in-out;
     }
     &:active:before {
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
+    }
+    &:focus:after {
       opacity: 1;
       transition: opacity 0.4s ease-in-out;
     }
@@ -1842,6 +1857,7 @@ button {
     flex: 0 1 800px;
     padding-right: 50px;
     order: 1;
+    animation: catalog 1.2s alternate ease-in-out;
     @media (max-width: 1024px) {
       flex-basis: 487px;
     }
@@ -1906,8 +1922,6 @@ button {
   &__bottom-right {
     flex: 0 1 800px;
     order: 2;
-    border-bottom: 1px solid #cacaca;
-    border-top: 1px solid #cacaca;
     @media (max-width: 1024px) {
       flex-basis: 437px;
     }
@@ -1923,125 +1937,19 @@ button {
   }
 }
 
+@keyframes catalog {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .catalog__bottom-author-active {
   display: block;
 }
-/* ACCORDION */
-.ui-accordion {
-  transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-}
-
-.ui-widget {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-}
-
-.ui-accordion .ui-accordion-header {
-  min-height: 115px;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  background-color: transparent;
-  background: url(../img/icons/accordionclose.png) right center no-repeat;
-  border-radius: 0;
-  border: none;
-  color: #333333;
-  transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-  &:hover {
-    color: $colorpurple;
-    border-color: $colorpurple;
-    background: url(../img/icons/accordionhover.png) right center no-repeat;
-    transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-  }
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 768px) {
-  }
-  @media (max-width: 320px) {
-    font-size: 18px;
-    min-height: 72px;
-    background-size: 30px 30px;
-    &:hover {
-      background-size: 30px 30px;
-    }
-  }
-}
-
-.ui-accordion .ui-accordion-header-active {
-  color: $coloractive;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid $coloractive;
-  border-top: 1px solid $coloractive;
-  background: url(../img/icons/accordionopen.png) right center no-repeat;
-  border-radius: 0;
-  transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-  &:hover {
-    background: url(../img/icons/accordionclick.png) right center no-repeat;
-    transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-  }
-  &:active {
-    color: $coloractive;
-    border-color: $coloractive;
-    transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-  }
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 768px) {
-  }
-  @media (max-width: 320px) {
-    background-size: 30px 30px;
-    &:hover {
-      background-size: 30px 30px;
-    }
-  }
-}
-
-.catalog__accordion-title-focus {
-  transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
-  &:focus {
-    background-color: $colorpurple;
-    color: #fff;
-    transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
-  }
-}
-
-.ui-accordion .ui-accordion-header-collapsed {
-  outline: none;
-  border: none;
-  border-top: 1px solid #cacaca;
-  border-bottom: 1px solid #cacaca;
-  border-radius: 0;
-  transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-}
-
-.ui-icon {
-  display: none;
-}
-
-.ui-accordion .ui-accordion-content {
-  padding: 29px 60px 26px 0px;
-  border: none;
-  @media (max-width: 1024px) {
-    padding-right: 0;
-  }
-  @media (max-width: 768px) {
-    padding-bottom: 22px;
-  }
-  @media (max-width: 320px) {
-    padding-top: 25px;
-    padding-bottom: 19px;
-  }
-}
-
-.ui-accordion .ui-accordion-content-active {
-  border: none;
-}
-
+/*ACCORDION*/
 .ui-widget-content a {
   color: $colorpurple;
   transition: color 0.4s ease-in-out;
@@ -2049,21 +1957,127 @@ button {
     color: $coloractive;
     transition: color 0.4s ease-in-out;
   }
+  &:focus {
+    color: $coloractive;
+    transition: color 0.4s ease-in-out;
+  }
 }
 
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
+.ui-widget {
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 1px solid #cacaca;
+}
+
+.ui-widget-content {
+  border: none;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
 .ui-widget button {
   font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
 }
+
+.ui-icon {
+  display: none;
+}
+
+.ui-corner-top {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.ui-corner-all {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.ui-accordion .ui-accordion-header {
+  margin: 0;
+  padding: 0;
+  padding-top: 41px;
+  padding-bottom: 41px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  &:hover {
+    padding-bottom: 42px;
+  }
+  &:active {
+    padding-bottom: 42px;
+  }
+}
+
+.ui-accordion .ui-accordion-header:hover.ui-state-active {
+  padding-bottom: 41px;
+  margin-bottom: 1px;
+}
+
+.ui-state-default {
+  z-index: 1;
+  position: absolute;
+  background-color: #fff;
+  background: url(../img/icons/btndownwhite.svg) right 32px no-repeat;
+  border: none;
+  border-top: 1px solid #cacaca;
+  border-bottom: 1px solid transparent;
+  color: #333333;
+  transition: border 0.4s ease-in-out, background 0.4s ease-in-out, color 0.4s ease-in-out;
+  &:hover {
+    z-index: 2;
+    top: 1px;
+    margin-top: -1px;
+    background: url(../img/icons/btndownfocus.svg) right 32px no-repeat;
+    color: $colorpurple;
+    border-top: 1px solid $colorpurple;
+    border-bottom: 1px solid $colorpurple;
+    transition: border 0.4s ease-in-out, background 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+  &:active {
+    background: url(../img/icons/btndownactive.svg) right 32px no-repeat;
+    color: $coloractive;
+    border-top: 1px solid $coloractive;
+    border-bottom: 1px solid $coloractive;
+    transition: border 0.4s ease-in-out, background 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+}
+.ui-state-active {
+  border-top: 1px solid $coloractive;
+  border-bottom: 1px solid $coloractive;
+  background: url(../img/icons/btndownactive.svg) right 32px no-repeat;
+  color: $coloractive;
+  transition: border 0.4s ease-in-out, background 0.4s ease-in-out, color 0.4s ease-in-out;
+  &:hover {
+    border-top: 1px solid $coloractive;
+    border-bottom: 1px solid $coloractive;
+    background: url(../img/icons/btndownactive.svg) right 32px no-repeat;
+    color: $coloractive;
+    transition: border 0.4s ease-in-out, background 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+  &:active {
+    border-top: 1px solid $coloractive;
+    border-bottom: 1px solid $coloractive;
+    background: url(../img/icons/btndownactive.svg) right 32px no-repeat;
+    color: $coloractive;
+    transition: border 0.4s ease-in-out, background 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+}
+/*---------------------------*/
 
 .catalog {
   &__bottom-accordion {
     margin: 0;
     padding: 0;
+    list-style-type: none;
   }
   &__accordion-content {
     display: flex;
@@ -2072,6 +2086,7 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 320px;
+    list-style-type: none;
     @media (max-width: 1024px) {
       max-height: 424px;
     }
@@ -2090,10 +2105,8 @@ button {
     margin-bottom: 5px;
     &:first-child {
       @media (max-width: 1024px) {
-        // margin-right: 100px;
       }
       @media (max-width: 768px) {
-        margin-right: 96px;
       }
       @media (max-width: 320px) {
       }
@@ -2116,11 +2129,9 @@ button {
     line-height: 26px;
     // letter-spacing: 1.5px;
     color: #333333;
-    border-bottom: 1px solid transparent;
     transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
     &:hover {
       color: $colorpurple;
-      border-bottom: 1px solid $colorpurple;
       transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
     }
     &:active {
@@ -2151,14 +2162,23 @@ button {
   }
 
   &__accordion-empty-left {
+    display: flex;
     margin-right: 24px;
     border: 2px solid #b7b7b7;
     & img {
+      align-items: center;
       max-width: 251px;
+      height: 165px;
       border: 12px solid transparent;
       @media (max-width: 1024px) {
+        max-width: 173px;
+        height: 114px;
+        border: 8px solid transparent;
       }
       @media (max-width: 768px) {
+        max-width: 251px;
+        height: 165px;
+        border: 12px solid transparent;
       }
       @media (max-width: 320px) {
         height: 118px;
@@ -2169,7 +2189,7 @@ button {
   }
 
   &__accordion-empty-right {
-    max-width: 275px;
+    max-width: 282px;
     @media (max-width: 1024px) {
     }
     @media (max-width: 768px) {
@@ -2199,15 +2219,20 @@ button {
   &__accordion-empty-description {
     margin: 0;
     padding: 0;
+    width: 282px;
     margin-bottom: 5px;
     font-size: 16px;
     line-height: 22px;
+    letter-spacing: 0.1px;
     color: #333333;
     @media (max-width: 1024px) {
+      width: 207px;
     }
     @media (max-width: 768px) {
+      width: 282px;
     }
     @media (max-width: 320px) {
+      width: 174px;
     }
   }
 
@@ -2215,7 +2240,6 @@ button {
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    color: $colorpurple;
   }
 }
 
@@ -2253,6 +2277,7 @@ button {
   }
 
   &__body {
+    display: flex;
     @media (max-width: 1024px) {
       margin-bottom: 16px;
     }
@@ -2267,11 +2292,13 @@ button {
   &__block {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
     border: 1px solid #cacaca;
   }
-}
 
+  .swiper-slide {
+    height: auto;
+  }
+}
 .events__wrapper {
   position: relative;
   max-width: 1680px;
@@ -2306,6 +2333,7 @@ button {
     flex-direction: column;
     align-items: flex-start;
     min-height: 400px;
+    height: 100%;
     padding: 13px 50px 43px 50px;
     @media (max-width: 1024px) {
       padding: 14px 16px 49px 34px;
@@ -2397,10 +2425,11 @@ button {
   &__block-link {
     padding-bottom: 2px;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 24px;
     border-bottom: 1px solid $colorpurple;
     color: $colorpurple;
-    transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
+    outline: none;
     &:hover {
       border-bottom: 1px solid $coloractive;
       color: $coloractive;
@@ -2411,6 +2440,12 @@ button {
       color: #333333;
       transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
     }
+    &:focus {
+      padding: 0 8px 3px 8px;
+      color: #fff;
+      background-color: $colorpurple;
+      transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
+    }
     @media (max-width: 1024px) {
     }
     @media (max-width: 768px) {
@@ -2419,18 +2454,6 @@ button {
       margin-left: 5px;
     }
   }
-}
-
-.events__block-link-wrapper:focus {
-  padding: 0 8px 3px 8px;
-  background-color: $colorpurple;
-  transition: background 0.4s ease-in-out, padding 0.4s ease-in-out;
-}
-
-.events__block-link-wrapper:focus .events__block-link {
-  color: #fff;
-  border-bottom: 1px solid #ffffff;
-  transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
 }
 
 .events__swiper-pagination {
@@ -2469,23 +2492,24 @@ button {
   top: 47%;
   width: 50px;
   height: 50px;
-  background: url(../img/icons/whitebtnnext.png) no-repeat;
+  background: url(../img/icons/whitebtnnext.svg) no-repeat;
   background-size: cover;
   transition: background 0.4s ease-in-out;
+  outline: none;
   cursor: pointer;
   transform: rotate(180deg);
   &:hover {
-    background: url(../img/icons/whitebtnnexthover.png) no-repeat;
+    background: url(../img/icons/whitebtnnexthover.svg) no-repeat;
     background-size: cover;
     transition: background 0.4s ease-in-out;
   }
   &:active {
-    background: url(../img/icons/whitebtnnestactive.png) no-repeat;
+    background: url(../img/icons/whitebtnnextactive.svg) no-repeat;
     background-size: cover;
     transition: background 0.4s ease-in-out;
   }
   &:focus {
-    background: url(../img/icons/whitebtnnextfocus.png) no-repeat;
+    background: url(../img/icons/whitebtnnextfocus.svg) no-repeat;
     background-size: cover;
     transition: background 0.4s ease-in-out;
   }
@@ -2506,22 +2530,23 @@ button {
   width: 50px;
   height: 50px;
   height: 50px;
-  background: url(../img/icons/whitebtnnext.png) no-repeat;
+  background: url(../img/icons/whitebtnnext.svg) no-repeat;
   background-size: cover;
   transition: background 0.4s ease-in-out;
+  outline: none;
   cursor: pointer;
   &:hover {
-    background: url(../img/icons/whitebtnnexthover.png) no-repeat;
+    background: url(../img/icons/whitebtnnexthover.svg) no-repeat;
     background-size: cover;
     transition: background 0.4s ease-in-out;
   }
   &:active {
-    background: url(../img/icons/whitebtnnestactive.png) no-repeat;
+    background: url(../img/icons/whitebtnnextactive.svg) no-repeat;
     background-size: cover;
     transition: background 0.4s ease-in-out;
   }
   &:focus {
-    background: url(../img/icons/whitebtnnextfocus.png) no-repeat;
+    background: url(../img/icons/whitebtnnextfocus.svg) no-repeat;
     background-size: cover;
     transition: background 0.4s ease-in-out;
   }
@@ -2733,6 +2758,13 @@ button {
     cursor: pointer;
     height: 150px;
     max-width: 450px;
+    border: 1px solid #cacaca;
+    &:active {
+      border: 1px solid $colorpurple;
+    }
+    &:focus {
+      border: 1px solid $colorpurple;
+    }
     @media (max-width: 1024px) {
       height: 128px;
     }
@@ -2745,286 +2777,259 @@ button {
   }
 
   &__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
   }
 
-  &__block-one {
-    background: url(../img/projects/projects1.png) center no-repeat;
-    background-size: 244px 63px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-one {
+    width: 244px;
+    height: 63px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover1.png) center no-repeat;
-      background-size: 244px 63px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover1.png) center no-repeat;
-      background-size: 244px 63px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 210px 52px;
+      width: 210px;
+      height: 52px;
     }
     @media (max-width: 768px) {
     }
     @media (max-width: 320px) {
-      background-size: 105px 26px;
+      width: 105px;
+      height: 26px;
     }
   }
 
-  &__block-two {
-    background: url(../img/projects/projects2.png) center no-repeat;
-    background-size: 330px 59px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-two {
+    width: 330px;
+    height: 59px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover2.png) center no-repeat;
-      background-size: 330px 59px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover2.png) center no-repeat;
-      background-size: 330px 59px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 283px 49px;
+      width: 283px;
+      height: 49px;
     }
     @media (max-width: 768px) {
-      background-size: 216px 38px;
+      width: 216px;
+      height: 38px;
     }
     @media (max-width: 320px) {
-      background-size: 141px 25px;
+      width: 141px;
+      height: 25px;
     }
   }
 
-  &__block-three {
-    background: url(../img/projects/projects3.png) center no-repeat;
-    background-size: 229px 53px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-three {
+    width: 229px;
+    height: 53px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover3.png) center no-repeat;
-      background-size: 229px 53px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover3.png) center no-repeat;
-      background-size: 229px 53px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 229px 54px;
+      width: 229px;
+      height: 54px;
     }
     @media (max-width: 768px) {
-      background-size: 195px 45px;
+      width: 195px;
+      height: 45px;
     }
     @media (max-width: 320px) {
-      background-size: 117px 27px;
+      width: 117px;
+      height: 27px;
     }
   }
 
-  &__block-four {
-    background: url(../img/projects/projects4.png) center no-repeat;
-    background-size: 123px 85px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-four {
+    width: 123px;
+    height: 85px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover4.png) center no-repeat;
-      background-size: 123px 85px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover4.png) center no-repeat;
-      background-size: 123px 85px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 105px 73px;
+      width: 105px;
+      height: 73px;
     }
     @media (max-width: 768px) {
     }
     @media (max-width: 320px) {
-      background-size: 53px 37px;
+      width: 53px;
+      height: 37px;
     }
   }
 
-  &__block-five {
-    background: url(../img/projects/projects5.png) center no-repeat;
-    background-size: 173px 85px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-five {
+    width: 173px;
+    height: 85px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover5.png) center no-repeat;
-      background-size: 173px 85px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover5.png) center no-repeat;
-      background-size: 173px 85px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 148px 73px;
+      width: 148px;
+      height: 73px;
     }
     @media (max-width: 768px) {
-      background-size: 121px 59px;
+      width: 121px;
+      height: 59px;
     }
     @media (max-width: 320px) {
-      background-size: 75px 37px;
+      width: 75px;
+      height: 37px;
     }
   }
 
-  &__block-six {
-    background: url(../img/projects/projects6.png) center no-repeat;
-    background-size: 252px 70px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-six {
+    width: 252px;
+    height: 70px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover6.png) center no-repeat;
-      background-size: 252px 70px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover6.png) center no-repeat;
-      background-size: 252px 70px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 215px 60px;
+      width: 215px;
+      height: 60px;
     }
     @media (max-width: 768px) {
-      background-size: 176px 48px;
+      width: 176px;
+      height: 48px;
     }
     @media (max-width: 320px) {
-      background-size: 109px 30px;
+      width: 109px;
+      height: 30px;
     }
   }
 
-  &__block-seven {
-    background: url(../img/projects/projects7.png) center no-repeat;
-    background-size: 286px 69px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-seven {
+    width: 286px;
+    height: 69px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover7.png) center no-repeat;
-      background-size: 286px 69px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover7.png) center no-repeat;
-      background-size: 286px 69px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 244px 59px;
+      width: 244px;
+      height: 59px;
     }
     @media (max-width: 768px) {
-      background-size: 194px 47px;
+      width: 194px;
+      height: 47px;
     }
     @media (max-width: 320px) {
-      background-size: 124px 30px;
+      width: 124px;
+      height: 30px;
     }
   }
 
-  &__block-eight {
-    background: url(../img/projects/projects8.png) center no-repeat;
-    background-size: 185px 81px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-eight {
+    width: 185px;
+    height: 81px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover8.png) center no-repeat;
-      background-size: 185px 81px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     &:active {
-      background: url(../img/projects/projectshover8.png) center no-repeat;
-      background-size: 185px 81px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 158px 69px;
+      width: 158px;
+      height: 69px;
     }
     @media (max-width: 768px) {
-      background-size: 143px 62px;
+      width: 143px;
+      height: 62px;
     }
     @media (max-width: 320px) {
-      background-size: 80px 35px;
+      width: 80px;
+      height: 35px;
     }
   }
 
-  &__block-nine {
-    background: url(../img/projects/projects9.png) center no-repeat;
-    background-size: 229px 62px;
-    border: 1px solid #cacaca;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
+  &__img-nine {
+    width: 229px;
+    height: 62px;
+    filter: grayscale(100);
+    opacity: 0.4;
+    transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:hover {
-      background: url(../img/projects/projectshover9.png) center no-repeat;
-      background-size: 229px 62px;
-      transition: background 0.4s ease-in-out;
+      filter: grayscale(0);
+      opacity: 1;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
 
     &:active {
-      background: url(../img/projects/projectshover9.png) center no-repeat;
-      background-size: 229px 62px;
-      border: 1px solid $colorpurple;
-      transition: background 0.4s ease-in-out, border 0.4s ease-in-out;
-    }
-    &:focus {
-      border: 1px solid $colorpurple;
-      transition: border 0.4s ease-in-out;
+      transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      background-size: 196px 53px;
+      width: 196px;
+      height: 53px;
     }
     @media (max-width: 768px) {
-      background-size: 182px 49px;
+      width: 182px;
+      height: 49px;
     }
     @media (max-width: 320px) {
-      background-size: 99px 27px;
+      width: 99px;
+      height: 27px;
     }
   }
 }
@@ -3035,22 +3040,22 @@ button {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background: url(../img/icons/btnbext.png) no-repeat;
+  background: url(../img/icons/whitebtnnext.svg) no-repeat;
   transition: background 0.4s ease-in-out;
   &:hover {
-    background: url(../img/icons/btnnexthover.png) no-repeat;
+    background: url(../img/icons/whitebtnnexthover.svg) no-repeat;
     transition: background 0.4s ease-in-out;
   }
   &:active {
-    background: url(../img/icons/btnnextactive.png) no-repeat;
+    background: url(../img/icons/whitebtnnextactive.svg) no-repeat;
     transition: background 0.4s ease-in-out;
   }
   &:focus {
-    background: url(../img/icons/btnnestfocus.png) no-repeat;
+    background: url(../img/icons/whitebtnnextfocus.svg) no-repeat;
     transition: background 0.4s ease-in-out;
   }
   &.swiper-button-disabled {
-    background: url(../img/icons/btnnextdisable.png) no-repeat;
+    background: url(../img/icons/whitebtnnextdisable.svg) no-repeat;
     transition: background 0.4s ease-in-out;
   }
   @media (max-width: 1024px) {
@@ -3067,27 +3072,27 @@ button {
   position: absolute;
   top: 40%;
   cursor: pointer;
-  background: url(../img/icons/btnbext.png) no-repeat;
+  background: url(../img/icons/whitebtnnext.svg) no-repeat;
   transform: rotate(180deg);
   width: 30px;
   height: 30px;
   &:hover {
-    background: url(../img/icons/btnnexthover.png) no-repeat;
+    background: url(../img/icons/whitebtnnexthover.svg) no-repeat;
     transition: background 0.4s ease-in-out;
     transform: rotate(180deg);
   }
   &:active {
-    background: url(../img/icons/btnnextactive.png) no-repeat;
+    background: url(../img/icons/whitebtnnextactive.svg) no-repeat;
     transition: background 0.4s ease-in-out;
     transform: rotate(180deg);
   }
   &:focus {
-    background: url(../img/icons/btnnestfocus.png) no-repeat;
+    background: url(../img/icons/whitebtnnextfocus.svg) no-repeat;
     transition: background 0.4s ease-in-out;
     transform: rotate(180deg);
   }
   &.swiper-button-disabled {
-    background: url(../img/icons/btnnextdisable.png) no-repeat;
+    background: url(../img/icons/whitebtnnextdisable.svg) no-repeat;
     transition: background 0.4s ease-in-out;
     transform: rotate(180deg);
   }
@@ -3124,7 +3129,6 @@ button {
   align-items: center;
   @media (max-width: 1024px) {
     display: block;
-    align-items: flex-start;
   }
   @media (max-width: 768px) {
   }
@@ -3621,7 +3625,6 @@ button {
 }
 .footer-social {
   order: 2;
-  display: flex;
   @media (max-width: 1024px) {
   }
   @media (max-width: 768px) {
@@ -3629,7 +3632,13 @@ button {
   @media (max-width: 320px) {
     order: 1;
   }
-  &__link {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__item {
     width: 45px;
     height: 45px;
     @media (max-width: 1024px) {
@@ -3642,94 +3651,92 @@ button {
       width: 50px;
       height: 50px;
     }
+    &:not(:last-child) {
+      margin-right: 20px;
+      @media (max-width: 1024px) {
+        margin-right: 30px;
+      }
+      @media (max-width: 768px) {
+      }
+      @media (max-width: 320px) {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    width: 45px;
+    height: 45px;
   }
   &__vk {
-    margin-right: 20px;
-    background: url(../img/icons/vkicon.svg) no-repeat;
+    background: url(../img/icons/vkiconhover.svg) no-repeat;
     background-size: cover;
-    transition: background 0.4s ease-in-out;
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out, background 0.4s ease-in-out;
     &:hover {
-      background: url(../img/icons/vkiconhover.svg) no-repeat;
-      background-size: cover;
-
-      transition: background 0.4s ease-in-out;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
     }
     &:active {
       background: url(../img/icons/vkiconactive.svg) no-repeat;
       background-size: cover;
-
       transition: background 0.4s ease-in-out;
     }
     &:focus {
-      background: url(../img/icons/vkiconhover.svg) no-repeat;
-      background-size: cover;
-
-      transition: background 0.4s ease-in-out;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      margin-right: 30px;
     }
     @media (max-width: 768px) {
     }
     @media (max-width: 320px) {
-      margin-right: 30px;
     }
   }
 
   &__inst {
-    margin-right: 20px;
-    background: url(../img/icons/instagramicon.svg) no-repeat;
+    background: url(../img/icons/instagramiconhover.svg) no-repeat;
     background-size: cover;
-    transition: background 0.4s ease-in-out;
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out, background 0.4s ease-in-out;
     &:hover {
-      background: url(../img/icons/instagramiconhover.svg) no-repeat;
-      background-size: cover;
-
-      transition: background 0.4s ease-in-out;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
     }
     &:active {
       background: url(../img/icons/instagramiconactive.svg) no-repeat;
       background-size: cover;
-
       transition: background 0.4s ease-in-out;
     }
     &:focus {
-      background: url(../img/icons/instagramiconhover.svg) no-repeat;
-      background-size: cover;
-
-      transition: background 0.4s ease-in-out;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
-      margin-right: 30px;
     }
     @media (max-width: 768px) {
     }
     @media (max-width: 320px) {
-      margin-right: 30px;
     }
   }
 
   &__facebook {
-    background: url(../img/icons/fbicon.svg) no-repeat;
+    background: url(../img/icons/fbiconhover.svg) no-repeat;
     background-size: cover;
-    transition: background 0.4s ease-in-out;
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out, background 0.4s ease-in-out;
     &:hover {
-      background: url(../img/icons/fbiconhover.svg) no-repeat;
-      background-size: cover;
-
-      transition: background 0.4s ease-in-out;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
     }
     &:active {
       background: url(../img/icons/fbiconactive.svg) no-repeat;
       background-size: cover;
-
       transition: background 0.4s ease-in-out;
     }
     &:focus {
-      background: url(../img/icons/fbiconhover.svg) no-repeat;
-      background-size: cover;
-
-      transition: background 0.4s ease-in-out;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
     }
     @media (max-width: 1024px) {
     }
