@@ -42,10 +42,6 @@ html {
   scroll-behavior: smooth;
 }
 
-ul {
-  list-style-type: none;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -1355,7 +1351,6 @@ a {
   &__period {
     cursor: pointer;
     position: relative;
-    padding-left: 24px;
     font-size: 16px;
     line-height: 32px;
     color: #ffffff;
@@ -1364,57 +1359,54 @@ a {
     &:hover {
       color: $coloreasy;
       transition: color 0.4s ease-in-out;
+      &::before {
+        border: 1px solid $coloreasy;
+      }
     }
     &:focus {
       color: $coloreasy;
       transition: color 0.4s ease-in-out;
+      &::before {
+        border: 1px solid $coloreasy;
+      }
     }
-    &:before {
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked ~ .gallery-form__period {
+      color: $coloreasy;
+    }
+    &:focus ~ label:before,
+    label {
+      border: 1px solid $coloreasy;
+    }
+    &:focus ~ .gallery-form__period {
+      color: $coloreasy;
+    }
+    & + label::before {
       content: "";
-      position: absolute;
+      display: inline-block;
+      margin-right: 12px;
       width: 12px;
       height: 12px;
-      left: 0;
-      top: 20%;
+      flex-shrink: 0;
+      flex-grow: 0;
       border: 1px solid #ffffff;
-      transition: border 0.4s ease-in-out;
+      background: url(../img/icons/ellipsetransporent.svg) no-repeat;
+      background-position: center center;
+      transition: border 0.4s ease-in-out, background 0.4s ease-in-out;
     }
-    &:after {
-      content: "";
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      left: 5px;
-      top: 40%;
+    &:checked + label:before {
+      border: 1px solid $coloreasy;
       background: url(../img/icons/ellipse.svg) no-repeat;
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out;
-    }
-    &:hover:before {
-      border: 1px solid $coloreasy;
-      transition: border 0.4s ease-in-out;
-    }
-    &:focus:before {
-      border: 1px solid $coloreasy;
-      transition: border 0.4s ease-in-out;
-    }
-    &.active {
-      color: $coloreasy;
-      transition: color 0.4s ease-in-out;
-    }
-    &.active:before {
-      border: 1px solid $coloreasy;
-      transition: border 0.4s ease-in-out;
-    }
-    &.active:after {
-      opacity: 1;
-      transition: opacity 0.4s ease-in-out;
+      background-position: center center;
+      transition: background 0.4s ease-in-out, border 3s ease-in-out;
     }
   }
   &__btn {
-    display: none;
-  }
-  &__checkbox {
     display: none;
   }
 }
@@ -2102,7 +2094,7 @@ a {
     padding: 0;
   }
   &__accordion-item {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     &:first-child {
       @media (max-width: 1024px) {
       }

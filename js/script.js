@@ -1,34 +1,4 @@
-// $(document).ready(function () {
-
-//   $.each($('.gallery-form__period'), function (index, val) {
-//     if ($(this).find('input').prop('checked') == true) {
-//       $(this).addClass('active');
-//     }
-//   });
-//   $(document).on('click', '.gallery-form__period', function (event) {
-//     if ($(this).hasClass('active')) {
-//       $(this).find('input').prop('checked', false);
-//     } else {
-//       $(this).find('input').prop('checked', true);
-//     }
-//     $(this).toggleClass('active');
-
-//     return false;
-//   });
-// });
-
-
-
 window.addEventListener('DOMContentLoaded', function () {
-
-
-  document.querySelectorAll('.gallery-form__period').forEach(function (gallery) {
-    gallery.addEventListener('click', function () {
-      gallery.classList.toggle('active')
-      console.log(gallery);
-    })
-  })
-
   /*CATALOG - ACCORDION*/
   document.querySelectorAll('.catalog__accordion-btn').forEach(function (catalogLink) {
     catalogLink.addEventListener('click', function (authors) {
