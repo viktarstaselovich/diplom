@@ -46,18 +46,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
-
-input,
-button,
-a {
-  cursor: pointer;
-  outline: none;
-  border: none;
-}
-
 .container {
   max-width: 1630px;
   margin: 0 auto;
@@ -82,6 +70,9 @@ a {
   display: none;
   width: 38px;
   height: 28px;
+  outline: none;
+  border: none;
+  cursor: pointer;
   background: url(../img/icons/burgericon.png) no-repeat;
   background-size: contain;
   transition: background 0.4s ease-in-out;
@@ -130,6 +121,10 @@ a {
   &__logo {
     padding-right: 15px;
     flex: 0 1 348px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
     @media (max-width: 1024px) {
       padding-left: 8px;
       flex: 0 1 188px;
@@ -197,9 +192,7 @@ a {
     display: flex;
     margin: 0;
     padding: 0;
-    width: 763px;
     flex-wrap: wrap;
-    justify-content: space-between;
     list-style-type: none;
     @media (max-width: 1024px) {
       width: 100%;
@@ -211,13 +204,30 @@ a {
     }
   }
 
+  &__item {
+    &:not(:last-child) {
+      margin-right: 62px;
+    }
+    @media (max-width: 1024px) {
+      margin-right: 0;
+    }
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 320px) {
+    }
+  }
+
   &__link {
-    font-weight: 600;
     padding: 0 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
     font-size: 18px;
     line-height: 24.5px;
     color: #ffffff;
     transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
+    text-decoration: none;
     &:hover {
       color: $coloreasy;
       transition: color 0.4s ease-in-out;
@@ -246,12 +256,16 @@ a {
 
   &__inside-link {
     padding-left: 28px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     font-size: 18px;
     font-weight: 400;
     line-height: 24.5px;
     background: url(../img/icons/inside.svg) 8px center no-repeat;
     color: #ffffff;
     transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+    text-decoration: none;
     &:hover {
       background: url(../img/icons/hoverinside.svg) 6px center no-repeat;
       color: $coloreasy;
@@ -315,6 +329,9 @@ a {
     display: none;
     width: 29px;
     height: 29px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     background: url(../img/icons/search.svg) no-repeat;
     background-size: cover;
     transition: background 0.4s ease-in-out;
@@ -363,6 +380,9 @@ a {
   &__search-desktop-input {
     display: block;
     width: 218px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     font-size: 20px;
     color: white;
     caret-color: $colorpurple;
@@ -384,6 +404,9 @@ a {
     margin-right: 15px;
     width: 30px;
     height: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     background: url(../img/icons/search.svg) no-repeat;
     background-size: contain;
     @media (max-width: 1024px) {
@@ -439,17 +462,22 @@ a {
   &__item {
     position: relative;
     margin-right: 94px;
+    &:last-child {
+      margin-right: 173px;
+    }
   }
 
   &__btn {
     padding-right: 16px;
     padding-left: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     background: url(../img/icons/dropdown.svg) 98% 60% no-repeat;
     font-size: 18px;
     font-weight: 400;
     line-height: 24.5px;
     color: #ffffff;
-    border: none;
     transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
     &:hover {
       color: $colorpurple;
@@ -470,14 +498,27 @@ a {
   &__form {
     padding-left: 30px;
     background: url(../img/icons/search.svg) left 4px no-repeat;
+    @media (max-width: 1482px) {
+      padding-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 320px) {
+    }
   }
 
   &__form-btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
     display: none;
   }
 
   &__input {
     position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
     background: none;
     caret-color: #ffffff;
     padding-right: 17px;
@@ -545,6 +586,10 @@ a {
 }
 
 .header-bottom__artmenu-link {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -911,6 +956,10 @@ a {
     }
     @media (max-width: 768px) {
     }
+    @media (max-width: 478px) {
+      padding-top: 34px;
+      padding-bottom: 45px;
+    }
     @media (max-width: 320px) {
       display: flex;
       flex-direction: column;
@@ -937,8 +986,8 @@ a {
       font-size: 36px;
       line-height: 50px;
     }
-    @media (max-width: 480px) {
-      font-size: 32px;
+    @media (max-width: 478px) {
+      font-size: 28px;
     }
     @media (max-width: 320px) {
       margin-bottom: 12px;
@@ -960,6 +1009,10 @@ a {
     }
     @media (max-width: 768px) {
     }
+    @media (max-width: 478px) {
+      margin-bottom: 41px;
+      font-size: 14px;
+    }
     @media (max-width: 320px) {
       margin-bottom: 41px;
       font-size: 12px;
@@ -972,6 +1025,10 @@ a {
 
   &__link {
     padding: 20px 32px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
     background-color: $colorpurple;
     border: 3px solid transparent;
     border-radius: 100px;
@@ -1333,8 +1390,6 @@ a {
 }
 
 .gallery-form {
-  // display: flex;
-  // flex-direction: column;
   @media (max-width: 1024px) {
   }
   @media (max-width: 768px) {
@@ -1374,6 +1429,9 @@ a {
 
   &__checkbox {
     position: absolute;
+    outline: none;
+    border: none;
+    cursor: pointer;
     z-index: -1;
     opacity: 0;
     &:checked ~ .gallery-form__period {
@@ -1408,6 +1466,9 @@ a {
   }
   &__btn {
     display: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
   }
 }
 .gallery-right {
@@ -1517,6 +1578,10 @@ a {
   }
 
   &__link {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
     &::after {
       content: "";
       position: absolute;
@@ -1683,6 +1748,10 @@ a {
 }
 .close {
   float: right;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
   font-size: 36px;
   font-weight: 100;
   line-height: 1;
@@ -2007,6 +2076,13 @@ a {
   &:active {
     padding-bottom: 42px;
   }
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 478px) {
+    font-size: 20px;
+  }
+  @media (max-width: 320px) {
+  }
 }
 
 .ui-accordion .ui-accordion-header:hover.ui-state-active {
@@ -2116,10 +2192,12 @@ a {
   }
 
   &__accordion-btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
     background: none;
     font-size: 16px;
     line-height: 26px;
-    // letter-spacing: 1.5px;
     color: #333333;
     transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
     &:hover {
@@ -2229,6 +2307,10 @@ a {
   }
 
   &__accordion-empty-link {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
@@ -2416,12 +2498,15 @@ a {
 
   &__block-link {
     padding-bottom: 2px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
     font-size: 16px;
     line-height: 24px;
     border-bottom: 1px solid $colorpurple;
     color: $colorpurple;
     transition: color 0.4s ease-in-out, border 0.4s ease-in-out, background 0.4s ease-in-out;
-    outline: none;
     &:hover {
       border-bottom: 1px solid $coloractive;
       color: $coloractive;
@@ -2604,6 +2689,9 @@ a {
   &__link {
     padding: 0 4px;
     cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
     color: $colorpurple;
     transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
     &:hover {
@@ -2626,9 +2714,12 @@ a {
 .projects__tooltip-link {
   position: relative;
   display: inline-block;
-  cursor: pointer;
   width: 16px;
   height: 16px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-decoration: none;
   background-image: url(../img/icons/tooltip.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2774,11 +2865,15 @@ a {
     align-items: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
   }
 
   &__img-one {
-    width: 244px;
-    height: 63px;
+    width: 54%;
+    height: 42%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2789,22 +2884,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 210px;
-      height: 52px;
-    }
-    @media (max-width: 768px) {
-    }
-    @media (max-width: 320px) {
-      width: 105px;
-      height: 26px;
     }
   }
 
   &__img-two {
-    width: 330px;
-    height: 59px;
+    width: 73%;
+    height: 39%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2815,24 +2900,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 283px;
-      height: 49px;
-    }
-    @media (max-width: 768px) {
-      width: 216px;
-      height: 38px;
-    }
-    @media (max-width: 320px) {
-      width: 141px;
-      height: 25px;
     }
   }
 
   &__img-three {
-    width: 229px;
-    height: 53px;
+    width: 51%;
+    height: 35%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2843,24 +2916,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 229px;
-      height: 54px;
-    }
-    @media (max-width: 768px) {
-      width: 195px;
-      height: 45px;
-    }
-    @media (max-width: 320px) {
-      width: 117px;
-      height: 27px;
     }
   }
 
   &__img-four {
-    width: 123px;
-    height: 85px;
+    width: 27%;
+    height: 57%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2871,22 +2932,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 105px;
-      height: 73px;
-    }
-    @media (max-width: 768px) {
-    }
-    @media (max-width: 320px) {
-      width: 53px;
-      height: 37px;
     }
   }
 
   &__img-five {
-    width: 173px;
-    height: 85px;
+    width: 38.5%;
+    height: 57%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2897,24 +2948,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 148px;
-      height: 73px;
-    }
-    @media (max-width: 768px) {
-      width: 121px;
-      height: 59px;
-    }
-    @media (max-width: 320px) {
-      width: 75px;
-      height: 37px;
     }
   }
 
   &__img-six {
-    width: 252px;
-    height: 70px;
+    width: 56%;
+    height: 47%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2925,24 +2964,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 215px;
-      height: 60px;
-    }
-    @media (max-width: 768px) {
-      width: 176px;
-      height: 48px;
-    }
-    @media (max-width: 320px) {
-      width: 109px;
-      height: 30px;
     }
   }
 
   &__img-seven {
-    width: 286px;
-    height: 69px;
+    width: 63.5%;
+    height: 46%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2953,24 +2980,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 244px;
-      height: 59px;
-    }
-    @media (max-width: 768px) {
-      width: 194px;
-      height: 47px;
-    }
-    @media (max-width: 320px) {
-      width: 124px;
-      height: 30px;
     }
   }
 
   &__img-eight {
-    width: 185px;
-    height: 81px;
+    width: 41%;
+    height: 54%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -2981,24 +2996,12 @@ a {
     }
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 158px;
-      height: 69px;
-    }
-    @media (max-width: 768px) {
-      width: 143px;
-      height: 62px;
-    }
-    @media (max-width: 320px) {
-      width: 80px;
-      height: 35px;
     }
   }
 
   &__img-nine {
-    width: 229px;
-    height: 62px;
+    width: 51%;
+    height: 41%;
     filter: grayscale(100);
     opacity: 0.4;
     transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -3010,18 +3013,6 @@ a {
 
     &:active {
       transition: filter 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
-    @media (max-width: 1024px) {
-      width: 196px;
-      height: 53px;
-    }
-    @media (max-width: 768px) {
-      width: 182px;
-      height: 49px;
-    }
-    @media (max-width: 320px) {
-      width: 99px;
-      height: 27px;
     }
   }
 }
@@ -3196,11 +3187,13 @@ a {
   }
 
   &__input {
-    cursor: pointer;
     padding-left: 24px;
     width: 270px;
     height: 50px;
     margin-right: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     caret-color: $colorpurple;
     border: 1px solid #333333;
     border-radius: 100px;
@@ -3221,16 +3214,20 @@ a {
       background-color: #eaeaea;
       transition: background 0.4s ease-in-out;
     }
+    @media (max-width: 1482px) {
+      margin-bottom: 10px;
+    }
     @media (max-width: 1024px) {
       margin-right: 10px;
     }
     @media (max-width: 768px) {
-      margin-right: 0;
+      margin-right: 30px;
       margin-bottom: 12px;
       width: 323px;
       height: 50px;
     }
-    @media (max-width: 480px) {
+    @media (max-width: 478px) {
+      margin-right: 0;
       width: 100%;
     }
     @media (max-width: 320px) {
@@ -3243,6 +3240,9 @@ a {
 
   &__btn {
     padding: 12.5px 35px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     font-size: 18px;
     font-weight: 700;
     line-height: 25px;
@@ -3280,6 +3280,9 @@ a {
 
   &__btn-mobil {
     display: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
     font-size: 12px;
     font-weight: 700;
     line-height: 16px;
@@ -3351,9 +3354,13 @@ a {
     margin-right: 20px;
     width: 40px;
     height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
     border: 1px solid transparent;
     border-radius: 100%;
-    background: url(../img/icons/Whatsapp.png) center no-repeat;
+    background: url(../img/icons/whatsapp.svg) center no-repeat;
     opacity: 1;
     transition: opacity 0.4s ease-in-out, border 0.4s ease-in-out;
     &:hover {
@@ -3382,9 +3389,13 @@ a {
   &__telegram {
     width: 40px;
     height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
     border: 1px solid transparent;
     border-radius: 100%;
-    background: url(../img/icons/telegram.png) center no-repeat;
+    background: url(../img/icons/telegram.svg) center no-repeat;
     opacity: 1;
     transition: opacity 0.4s ease-in-out, border 0.4s ease-in-out;
     &:hover {
@@ -3592,6 +3603,10 @@ a {
   }
 
   &__logo {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
     order: 1;
     @media (max-width: 1024px) {
     }
@@ -3659,6 +3674,10 @@ a {
     display: block;
     width: 45px;
     height: 45px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
   }
   &__vk {
     background: url(../img/icons/vkiconhover.svg) no-repeat;
